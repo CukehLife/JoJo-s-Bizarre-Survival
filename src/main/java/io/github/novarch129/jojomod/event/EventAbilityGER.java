@@ -21,7 +21,7 @@ public class EventAbilityGER {
             PlayerEntity player = (PlayerEntity) event.getEntityLiving();
             Stand.getLazyOptional(player).ifPresent(props -> {
                 if (props.getStandID() == Util.StandID.GER) {
-                    event.setCanceled(true);
+                    //event.setCanceled(true);
                     if (event.getSource().getTrueSource() instanceof PlayerEntity)
                         props.setDiavolo(event.getSource().getTrueSource().getDisplayName().toString());
                     else if (event.getSource() == DamageSource.OUT_OF_WORLD && player.dimension != DimensionType.THE_END)
