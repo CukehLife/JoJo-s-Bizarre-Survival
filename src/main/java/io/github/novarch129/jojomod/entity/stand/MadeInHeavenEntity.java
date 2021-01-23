@@ -120,24 +120,12 @@ public class MadeInHeavenEntity extends AbstractStandEntity {
 
                 if (props.getTimeLeft() < -2200) {
                     master.addPotionEffect(new EffectInstance(Effects.SPEED, 40, 255));
-                    master.addPotionEffect(new EffectInstance(Effects.LEVITATION, 40, 2));
                     world.createExplosion(this, getPosX() + rand.nextInt(100), getPosY() - fallDistance, getPosZ() + rand.nextInt(100), 4.0f, Explosion.Mode.DESTROY);
                     world.setDayTime(world.getDayTime() + 500);
                 }
 
-                if (props.getTimeLeft() <= -2600 && JojoBizarreSurvivalConfig.COMMON.singularityPoint.get()) {
-                    world.getPlayers().forEach(entity -> Stand.getLazyOptional(entity).ifPresent(prps -> {
-                        if (prps.getStandID() != Util.StandID.GER) {
-                            entity.inventory.clear();
-                            entity.getInventoryEnderChest().clear();
-                            EventD4CTeleportProcessor.madeInHeaven.add(entity);
-                            entity.addPotionEffect(new EffectInstance(Effects.RESISTANCE, 40, 99));
-                            entity.fallDistance = 0;
-                            entity.setSpawnDimenion(DimensionType.byName(DimensionInit.MADE_IN_HEAVEN_DIMENSION_TYPE));
-                            prps.removeStand();
-                            entity.setInvulnerable(false);
-                        }
-                    }));
+                if (props.getTimeLeft() <= -3000) {
+                    props.setTimeLeft(0);
                 }
             });
             master.addPotionEffect(new EffectInstance(Effects.SPEED, 40, 19));
