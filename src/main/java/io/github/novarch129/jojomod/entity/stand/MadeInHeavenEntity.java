@@ -141,7 +141,9 @@ public class MadeInHeavenEntity extends AbstractStandEntity {
                 }
             });
             master.addPotionEffect(new EffectInstance(Effects.SPEED, 40, 19));
-            master.setHealth(20);
+            if (master.getHealth < master.getMaxHealth()) {
+                master.setHealth(master.getHealth() + 1);
+            }
             master.getFoodStats().addStats(20, 20);
 
             followMaster();
