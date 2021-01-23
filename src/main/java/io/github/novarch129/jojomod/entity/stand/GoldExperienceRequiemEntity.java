@@ -9,6 +9,8 @@ import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.monster.CreeperEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.potion.Effects;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvent;
@@ -67,7 +69,11 @@ public class GoldExperienceRequiemEntity extends AbstractStandEntity {
                     props.setTransformed(0);
                     props.setCooldown(60);
                 }
+                if (master.getHealth() < master.getMaxHealth()) {
+                    master.setHealth(master.getHealth() + 1);
+                }
                 master.getFoodStats().addStats(20, 20.0f);
+                master.addPotionEffect(new EffectInstance(Effects.RESISTANCE, 40, 2));
 
                 if (ability) {
                     if (master.getLastAttackedEntity() != null) {
