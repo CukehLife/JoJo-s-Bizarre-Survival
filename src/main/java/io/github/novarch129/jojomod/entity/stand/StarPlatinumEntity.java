@@ -361,7 +361,9 @@ public class StarPlatinumEntity extends AbstractStandEntity {
             Stand.getLazyOptional(master).ifPresent(props2 -> {
                 ability = props2.getAbility();
                 props2.setAbilityActive(props2.getTimeLeft() > 900 && props2.getAbility() && props2.getCooldown() == 0 && props2.getInvulnerableTicks() == 0);
-
+                
+                master.addPotionEffect(new EffectInstance(Effects.RESISTANCE, 40, 2));
+                
                 if (ability && props2.getTimeLeft() > 900 && props2.getInvulnerableTicks() == 0)
                     props2.setTimeLeft(props2.getTimeLeft() - 1);
 
