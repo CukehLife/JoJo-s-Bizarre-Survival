@@ -70,7 +70,7 @@ public class EntityInit {
                     .disableSummoning().size(0.2f, 0.2f)
                     .build(new ResourceLocation(JojoBizarreSurvival.MOD_ID, "gold_experience_requiem_punch").toString()));
 
-    public static final RegistryObject<EntityType<AerosmithEntity>> AEROSMITH = ENTITY_TYPES
+    /*public static final RegistryObject<EntityType<AerosmithEntity>> AEROSMITH = ENTITY_TYPES
             .register("aerosmith",
                     () -> EntityType.Builder.create(AerosmithEntity::new, EntityClassification.CREATURE)
                             .disableSummoning().size(0.8f, 0.8f)
@@ -90,7 +90,7 @@ public class EntityInit {
     public static final RegistryObject<EntityType<WeatherReportPunchEntity>> WEATHER_REPORT_PUNCH = ENTITY_TYPES
             .register("weather_report_punch", () -> EntityType.Builder.<WeatherReportPunchEntity>create(WeatherReportPunchEntity::new, EntityClassification.MISC)
                     .disableSummoning().size(0.2f, 0.2f)
-                    .build(new ResourceLocation(JojoBizarreSurvival.MOD_ID, "weather_report_punch").toString()));
+                    .build(new ResourceLocation(JojoBizarreSurvival.MOD_ID, "weather_report_punch").toString()));*/
 
     public static final RegistryObject<EntityType<KillerQueenEntity>> KILLER_QUEEN = ENTITY_TYPES
             .register("killer_queen",
@@ -122,7 +122,7 @@ public class EntityInit {
                             .disableSummoning().size(0.2f, 0.2f)
                             .build(new ResourceLocation(JojoBizarreSurvival.MOD_ID, "crazy_diamond_punch").toString()));
 
-    public static final RegistryObject<EntityType<PurpleHazeEntity>> PURPLE_HAZE = ENTITY_TYPES
+    /*public static final RegistryObject<EntityType<PurpleHazeEntity>> PURPLE_HAZE = ENTITY_TYPES
             .register("purple_haze",
                     () -> EntityType.Builder.create(PurpleHazeEntity::new, EntityClassification.CREATURE)
                             .disableSummoning().size(1.2f, 2.7f)
@@ -132,7 +132,7 @@ public class EntityInit {
             .register("purple_haze_punch",
                     () -> EntityType.Builder.<PurpleHazePunchEntity>create(PurpleHazePunchEntity::new, EntityClassification.MISC)
                             .disableSummoning().size(0.2f, 0.2f)
-                            .build(new ResourceLocation(JojoBizarreSurvival.MOD_ID, "purple_haze_punch").toString()));
+                            .build(new ResourceLocation(JojoBizarreSurvival.MOD_ID, "purple_haze_punch").toString()));*/
 
     public static final RegistryObject<EntityType<EmperorBulletEntity>> EMPEROR_BULLET = ENTITY_TYPES
             .register("emperor_bullet", () -> EntityType.Builder.<EmperorBulletEntity>create(EmperorBulletEntity::new, EntityClassification.MISC)
@@ -247,7 +247,7 @@ public class EntityInit {
                             .disableSummoning().size(0.4f, 0.2f)
                             .build(new ResourceLocation(JojoBizarreSurvival.MOD_ID, "hierophant_green_tail").toString()));
 
-    public static final RegistryObject<EntityType<GreenDayEntity>> GREEN_DAY = ENTITY_TYPES
+    /*public static final RegistryObject<EntityType<GreenDayEntity>> GREEN_DAY = ENTITY_TYPES
             .register("green_day",
                     () -> EntityType.Builder.create(GreenDayEntity::new, EntityClassification.CREATURE)
                             .disableSummoning().size(1.2f, 2.7f)
@@ -275,7 +275,7 @@ public class EntityInit {
             .register("the_grateful_dead_punch",
                     () -> EntityType.Builder.<TheGratefulDeadPunchEntity>create(TheGratefulDeadPunchEntity::new, EntityClassification.MISC)
                             .disableSummoning().size(0.2f, 0.2f)
-                            .build(new ResourceLocation(JojoBizarreSurvival.MOD_ID, "the_grateful_dead_punch").toString()));
+                            .build(new ResourceLocation(JojoBizarreSurvival.MOD_ID, "the_grateful_dead_punch").toString()));*/
 
     public static final RegistryObject<EntityType<StickyFingersEntity>> STICKY_FINGERS = ENTITY_TYPES
             .register("sticky_fingers",
